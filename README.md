@@ -3,7 +3,7 @@
 This is a Heroku buildpack that enables authenticated GitHub operations
 within a Heroku dyno.
 
-It detects a `GITHUB_AUTH_TOKEN` environment variable and creates a `.netrc`
+It detects a `PROGRAM_BOT_GITHUB_TOKEN` environment variable and creates a `.netrc`
 file with a GitHub entry.
 
 It is the soul sister of the [npm Buildpack](https://github.com/zeke/npm-buildpack).
@@ -18,7 +18,7 @@ First, create a new GitHub access token at
 Then save this token in your Heroku app's config:
 
 ```sh
-heroku config:set GITHUB_AUTH_TOKEN=YOUR_TOKEN_HERE
+heroku config:set PROGRAM_BOT_GITHUB_TOKEN=YOUR_TOKEN_HERE
 ```
 
 Then configure your app to use this buildpack:
